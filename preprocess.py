@@ -6,7 +6,7 @@
 
 import re
 import nltk
-from word_lists import Contracted_word,Stop_words,neg_words
+from PyTextClean.word_lists import Contracted_word,Stop_words,neg_words
 import pandas as pd
 from nltk.corpus import stopwords  
 
