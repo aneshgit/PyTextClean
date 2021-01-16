@@ -28,10 +28,10 @@ class TextPreprocessing():
             return Contracted_word
     def remove_words(self):
         if self.new_stop_words:
-            stop_=self.stop_words+self.new_stop_words
-            return stop_
+            self.stop_=self.stop_words.extend(self.new_stop_words)
+            return self.stop_
         else:
-            return Stop_words
+            return self.stop_words
     def text_preprocessing(self,data):
         
         STOP_WORDS=self.remove_words()
