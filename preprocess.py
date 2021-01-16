@@ -39,7 +39,7 @@ class TextPreprocessing():
             pass
         else:
             STOP_WORDS=[word for word in STOP_WORDS if not word in neg_words]
-        data=data.text.apply(lambda x:x.lower())
+        data=data.apply(lambda x:x.lower())
         data=data.replace(self.replace_word(),regex=True)
         
         Sents=[]
