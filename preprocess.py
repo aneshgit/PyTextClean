@@ -17,7 +17,8 @@ class TextPreprocessing():
         nltk.download("stopwords")
         self.include_negative_words=include_negative_words
         self.replacement_word=replacement_word
-        self.stop_words=stop_words
+        self.new_stop_words=stop_words
+        self.stop_words=Stop_words
         self.Contracted_word={k.lower():v.lower() for k,v in Contracted_word.items()}
     def replace_word(self):
         if self.replacement_word:
@@ -27,7 +28,7 @@ class TextPreprocessing():
             return Contracted_word
     def remove_words(self):
         if self.stop_words:
-            stop_=Stop_words.extend(self.stop_words)
+            stop_=self.stop_words.extend(self.new_stop_words)
             return stop_
         else:
             return Stop_words
