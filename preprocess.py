@@ -13,7 +13,7 @@ from nltk.corpus import stopwords
 
 
 class TextPreprocessing():
-    def __init__(self,include_negative_words,replacement_word=None,stop_words=None):
+    def __init__(self,include_negative_words,replacement_word=None,stop_words=[]):
         nltk.download("stopwords")
         self.include_negative_words=include_negative_words
         self.replacement_word=replacement_word
@@ -28,7 +28,7 @@ class TextPreprocessing():
             return Contracted_word
     def remove_words(self):
         if self.new_stop_words:
-            stop_=self.stop_words.extend(self.new_stop_words)
+            stop_=self.stop_words+self.new_stop_words
             return stop_
         else:
             return Stop_words
