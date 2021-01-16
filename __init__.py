@@ -1,1 +1,1 @@
-from pyTextClean.preprocess import TextPreprocessing
+from PyTextClean.preprocess import TextPreprocessing
